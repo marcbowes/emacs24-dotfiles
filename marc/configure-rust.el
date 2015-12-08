@@ -10,5 +10,7 @@
 (define-key rust-mode-map (kbd "M-.") #'racer-find-definition)
 
 ;; installed things on nightly
+(starter-kit-install-if-needed 'rustfmt)
+(define-key rust-mode-map (kbd "C-c C-f") #'rustfmt-format-buffer)
 (setenv "PATH" (concat (getenv "PATH") ":" (getenv "HOME") "/.multirust/toolchains/nightly/cargo/bin"))
 (add-to-list 'exec-path (concat (getenv "HOME") "/.multirust/toolchains/nightly/cargo/bin"))
