@@ -6,9 +6,11 @@
 (setq racer-rust-src-path (concat (getenv "HOME") "/code/rust/rust/src"))
 
 (require 'rust-mode)
-(add-hook 'rust-mode-hook #'racer-activate)
-(define-key rust-mode-map (kbd "TAB") #'racer-complete-or-indent)
-(define-key rust-mode-map (kbd "M-.") #'racer-find-definition)
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'racer-mode-hook #'eldoc-mode)
+(add-hook 'racer-mode-hook #'company-mode)
+(setq company-tooltip-align-annotations t)
+(define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
 
 ;; installed things on stable
 (starter-kit-install-if-needed 'rustfmt)
