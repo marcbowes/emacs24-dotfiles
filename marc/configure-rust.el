@@ -12,6 +12,10 @@
 (setq company-tooltip-align-annotations t)
 (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
 
+(starter-kit-install-if-needed 'flycheck-rust)
+(add-hook 'rust-mode-hook #'flycheck-mode)
+(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+
 ;; installed things on stable
 (starter-kit-install-if-needed 'rustfmt)
 (define-key rust-mode-map (kbd "C-c C-f") #'rustfmt-format-buffer)
