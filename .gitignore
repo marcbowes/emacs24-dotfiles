@@ -61,3 +61,7 @@ literate-starter-kit.tar
 ido.last
 nohup.out
 recentf
+
+## Things I've installed that make a mess
+.mc-lists.el
+projectile-bookmarks.eld
