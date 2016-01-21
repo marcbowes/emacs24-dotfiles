@@ -3,6 +3,7 @@
 
 ;; Setting rbenv path
 (setq rbenv-installation-dir (concat (getenv "HOME") ".rbenv"))
+(starter-kit-install-if-needed 'rbenv)
 (require 'rbenv)
 (global-rbenv-mode)
 
@@ -12,6 +13,7 @@
 
 ;; flymake-ruby
 (setq flymake-ruby-executable (concat (getenv "HOME") "/.rbenv/shims/ruby"))
+(starter-kit-install-if-needed 'flymake-ruby)
 (require 'flymake-ruby)
 ;; I have no idea why this is required, but it is if you want it to
 ;; work properly with rbenv..

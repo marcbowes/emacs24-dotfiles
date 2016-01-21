@@ -7,9 +7,11 @@
 (starter-kit-load "org")
 (starter-kit-load "js")
 
+(starter-kit-install-if-needed 'paredit)
 (require 'paredit)
 (starter-kit-load "lisp")
 
+(starter-kit-install-if-needed 'mode-compile)
 (require 'mode-compile)
 
 

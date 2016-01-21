@@ -1,5 +1,6 @@
 ;; Some of this comes from http://tuhdo.github.io/helm-intro.html
 
+(starter-kit-install-if-needed 'helm)
 (require 'helm)
 (require 'helm-config)
 

@@ -2,6 +2,7 @@
 (require 'brazil-support)
 
 ;;; Rspec - requires .24
+(starter-kit-install-if-needed 'rspec-mode)
 (require 'rspec-mode)
 (add-hook 'ruby-mode-hook 'rspec-mode)
 

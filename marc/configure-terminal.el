@@ -1,4 +1,5 @@
 ;; term
+(starter-kit-install-if-needed 'multi-term)
 (require 'multi-term)
 (setq multi-term-program "/apollo/env/envImprovement/var/bin/zsh")
 

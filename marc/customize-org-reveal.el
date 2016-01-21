@@ -1,4 +1,4 @@
 ;; org-reveal
-(add-to-list 'load-path (concat starter-kit-dir "vendor/org-reveal"))
+(starter-kit-install-if-needed 'ox-reveal)
 (require 'ox-reveal)
 

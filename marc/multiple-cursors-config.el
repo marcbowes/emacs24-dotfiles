@@ -1,3 +1,4 @@
+(starter-kit-install-if-needed 'multiple-cursors)
 (require 'multiple-cursors)
 
 ;; When you have an active region that spans multiple lines, the
