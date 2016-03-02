@@ -18,3 +18,5 @@
   (loop for (expr . mode) in auto-mode-alist
         when (string-match expr filename)
         collect (cons expr mode)))
+
+(starter-kit-install-if-needed 'use-package)
