@@ -28,3 +28,6 @@
 
 (helm-mode 1)
 
+;; helm-dash
+(use-package helm-dash
+  :ensure t)
