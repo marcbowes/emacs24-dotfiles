@@ -5,7 +5,6 @@
 (delq (assoc "COMMIT_EDITMSG$" auto-mode-alist) auto-mode-alist)
 
 (starter-kit-load "org")
-(starter-kit-load "js")
 
 (starter-kit-install-if-needed 'paredit)
 (require 'paredit)

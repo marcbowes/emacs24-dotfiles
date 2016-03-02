@@ -192,7 +192,6 @@ generally useful please submit it to the starter kit core!
 - [[file:starter-kit-g-client.org][g-client]]
 - [[file:starter-kit-gnus.org][gnus]]
 - [[file:starter-kit-haskell.org][haskell]]
-- [[file:starter-kit-js.org][js]]
 - [[file:starter-kit-lisp.org][lisp]]
 - [[file:starter-kit-misc-recommended.org][misc-recommended]]
 - [[file:starter-kit-org.org][org]]
