@@ -10,10 +10,6 @@
 (require 'paredit)
 (starter-kit-load "lisp")
 
-(starter-kit-install-if-needed 'mode-compile)
-(require 'mode-compile)
-
-
 (let ((filename "/COMMIT_EDITMSG"))
   (loop for (expr . mode) in auto-mode-alist
         when (string-match expr filename)
