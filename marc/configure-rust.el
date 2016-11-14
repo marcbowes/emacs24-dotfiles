@@ -8,16 +8,17 @@
 (add-to-list 'exec-path (concat (getenv "HOME") "/.cargo/bin"))
 
 ;; use rustup to configure the default toolchain
-(require 's)
-(require 'dash)
-(setq rust-default-toolchain
-      (car (s-split " " (-first
-                         (lambda (line) (s-match "default" line)) 
-                         (s-lines (shell-command-to-string "rustup toolchain list"))))))
-
-;; tell racer to use the rustup-managed rust-src
-;; rustup component add rust-src
-(setq racer-rust-src-path (concat (getenv "HOME") "/.multirust/toolchains/" rust-default-toolchain "/lib/rustlib/src/rust/src"))
+(when (executable-find "rustup")
+  (starter-kit-install-if-needed 's 'dash)
+  (require 's)
+  (require 'dash)
+  (setq rust-default-toolchain
+        (car (s-split " " (-first
+                           (lambda (line) (s-match "default" line)) 
+                           (s-lines (shell-command-to-string "rustup toolchain list"))))))
+  ;; tell racer to use the rustup-managed rust-src
+  ;; rustup component add rust-src
+  (setq racer-rust-src-path (concat (getenv "HOME") "/.multirust/toolchains/" rust-default-toolchain "/lib/rustlib/src/rust/src")))
 
 (require 'rust-mode)
 (add-hook 'rust-mode-hook #'racer-mode)
