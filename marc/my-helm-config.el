@@ -31,3 +31,6 @@
 ;; helm-dash
 (use-package helm-dash
   :ensure t)
+
+;;(use-package helm-grep
+;;  :ensure t)
