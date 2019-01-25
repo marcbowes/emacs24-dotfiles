@@ -58,10 +58,9 @@
         (setq lsp-rust-rls-command '("rustup" "run" "nightly" "rls"))))
 
   ;; Not using RLS
-  (use-package rustfmt)
+  ;; (use-package rustfmt)
   
   (use-package rust-mode
-    :after rustfmt
     :config
     (add-hook 'rust-mode-hook #'racer-mode)
     (add-hook 'racer-mode-hook #'eldoc-mode)
